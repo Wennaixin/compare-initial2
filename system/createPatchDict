@@ -1,0 +1,30 @@
+FoamFile
+{
+	version	2.0;
+	format	ascii;
+	class	dictionary;
+	location	"system";
+	object	createPatchDict;
+}
+pointSync	false;
+patches	(
+	{
+		name	external;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(external_cylinder external_disk1 external_disk2);
+	}
+
+	{
+		name	propeller;
+		patchInfo
+		{
+			type	wall;
+		}
+		constructFrom	patches;
+		patches	(propeller_default);
+	}
+);

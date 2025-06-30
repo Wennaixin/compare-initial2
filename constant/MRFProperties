@@ -1,0 +1,17 @@
+FoamFile
+{
+	version	2.0;
+	format	ascii;
+	class	dictionary;
+	location	"constant";
+	object	MRFProperties;
+}
+external
+{
+	cellZone	external;
+	active	true;
+	origin	(0 0 0);
+	axis	(-1 0 0);
+	omega	constant 300;
+	nonRotatingPatches	(outlet right external inlet left);
+}

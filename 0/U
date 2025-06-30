@@ -1,0 +1,40 @@
+FoamFile
+{
+	version	2.0;
+	format	binary;
+	class	volVectorField;
+	location	"0";
+	object	U;
+	arch	"LSB;label=32;scalar=64";
+}
+dimensions	[0 1 -1 0 0 0 0];
+internalField	uniform (0 0 0);
+boundaryField
+{
+	outlet
+	{
+		type	zeroGradient;
+	}
+	left
+	{
+		type	cyclicAMI;
+	}
+	right
+	{
+		type	cyclicAMI;
+	}
+	inlet
+	{
+		type	pressureInletOutletVelocity;
+		value	uniform (0 0 0);
+	}
+	propeller
+	{
+		type	noSlip;
+	}
+	external
+	{
+		type	pressureInletOutletVelocity;
+		value	uniform (0 0 0);
+	}
+}

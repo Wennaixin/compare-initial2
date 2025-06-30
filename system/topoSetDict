@@ -1,0 +1,22 @@
+FoamFile
+{
+	version	2.0;
+	format	ascii;
+	class	dictionary;
+	location	"system";
+	object	topoSetDict;
+}
+actions	(
+	{
+		name	external;
+		type	cellZoneSet;
+		action	new;
+		source	cylinderToCell;
+		sourceInfo
+		{
+			p1	(-0.001 0 0);
+			p2	(1.5009999 0 0);
+			radius	1;
+		}
+	}
+);
