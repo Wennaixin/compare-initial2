@@ -1,0 +1,2 @@
+# compare-initial2
+比较桌面上的initial和simflow_propeller中的有什么区别
